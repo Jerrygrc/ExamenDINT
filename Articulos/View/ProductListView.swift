@@ -31,29 +31,25 @@ struct ProductListView: View {
                 }
             }
         }.toolbar{
-            ToolbarItem(placement: .bottomBar){
+            ToolbarItemGroup(placement: .bottomBar){
                 Button(action: {
                     viewModel.fetchElectronics()
                 }){
                     Image(systemName: "laptopcomputer")
                 }
-            }
-
-            ToolbarItem(placement: .bottomBar) {
+                Spacer()
                 Button(action: {
                     viewModel.fetchJoyeria()
                 }){
                     Image(systemName: "giftcard")
                 }
-            }
-            ToolbarItem(placement: .bottomBar) {
+                Spacer()
                 Button(action: {
                     viewModel.fetchHombre()
                 }){
                     Image(systemName: "figure.stand")
                 }
-            }
-            ToolbarItem(placement: .bottomBar) {
+                Spacer()
                 Button(action: {
                     viewModel.fetchMujer()
                 }){
