@@ -29,7 +29,7 @@ struct ProductListView: View {
                         }
                     }
                 }
-            }
+            }.navigationTitle("Productos")
         }.toolbar{
             ToolbarItemGroup(placement: .bottomBar){
                 Button(action: {
