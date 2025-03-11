@@ -30,7 +30,36 @@ struct ProductListView: View {
                     }
                 }
             }
-            .navigationTitle("Electrónica")
+        }.toolbar{
+            ToolbarItem(placement: .bottomBar){
+                Button(action: {
+                    viewModel.fetchElectronics()
+                }){
+                    Image(systemName: "laptopcomputer")
+                }
+            }
+
+            ToolbarItem(placement: .bottomBar) {
+                Button(action: {
+                    viewModel.fetchJoyeria()
+                }){
+                    Image(systemName: "giftcard")
+                }
+            }
+            ToolbarItem(placement: .bottomBar) {
+                Button(action: {
+                    viewModel.fetchHombre()
+                }){
+                    Image(systemName: "figure.stand")
+                }
+            }
+            ToolbarItem(placement: .bottomBar) {
+                Button(action: {
+                    viewModel.fetchMujer()
+                }){
+                    Image(systemName: "figure.stand.dress")
+                }
+            }
         }
     }
 }
